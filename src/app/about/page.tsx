@@ -1,13 +1,9 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useTheme } from "@/context/themeContext";
 
 export default function AboutPage() {
-  const [test, setTest] = useState<string>("");
+  const { theme } = useTheme();
 
-  useEffect(() => {
-    setTest("ahoj");
-  }, []);
-
-  return <>{test}</>;
+  return <div>{theme}</div>;
 }
